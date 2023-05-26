@@ -6,11 +6,8 @@ public class Lotto extends LottoManager {
 	private String form;
 	private String winOrLose;
 
-	public Lotto(int[] num, String form, String winOrLose) {
-		super();
-		this.num = num;
-		this.form = form;
-		this.winOrLose = winOrLose;
+	public Lotto() {
+//		num=new int{0,0,0,0,0,0};
 	}
 
 	public int[] getNum() {
