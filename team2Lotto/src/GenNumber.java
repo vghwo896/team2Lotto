@@ -43,11 +43,16 @@ public class GenNumber {
 
 	// 클릭 액션
 	public void SelectNumber(int i) {
-		if (list.size() < 6) {
-			getList().add(i);
+		if (!(list.contains(i))) {
+			if (list.size() < 6) {
+				getList().add(i);
+			} else {
+				System.out.println("6개 이상 선택은 불가능합니다.");
+			}
+		} else {
+			System.out.println("같은 숫자는 선택이 불가능 합니다.");
 		}
 	}
-
 	// 선택 확정 버튼에 들어갈 액션.
 
 	public int Confirmed(List<Integer> list, Lotto lotto) {
@@ -71,6 +76,7 @@ public class GenNumber {
 			count++;
 		}
 		System.out.println(lotto.toString());
+		list.removeAll(list);
 		return count;
 	}
 
@@ -80,32 +86,32 @@ public class GenNumber {
 	public static void main(String[] args) {
 		GenNumber gen = new GenNumber();
 		Scanner scan = new Scanner(System.in);
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; gen.list.size() < 7; i++) {
+			if (gen.list.size() == 6) {
+				gen.Confirmed(gen.list, new Lotto());
+			}
 			System.out.println("1. 번호 선택(수동)    2. 자동");
 			int choice = scan.nextInt();
-			
+
 			switch (choice) {
 			case 1:
 				System.out.println("수동 선택\n번호 입력");
 				int num = scan.nextInt();
-				for (int j = 0; j < gen.list.size(); j++) {
-					if(gen.list.contains(num)) {
-						System.out.println("true");
-						gen.SelectNumber(num);
-					}else {
-						System.out.println("다시입력");
-					}
+				if (!(num >= 1 && num <= 45)) {
+					System.out.println("1 에서 45 사이의 숫자만 선택");
+					continue;
 				}
+				gen.SelectNumber(num);
 				break;
 			case 2:
 				gen.Confirmed(gen.list, new Lotto());
 				break;
 			case 3:
-				
+
 			default:
 				break;
 			}
-			
+
 		}
 	}
 
