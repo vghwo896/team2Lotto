@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class GenNumber{
 
-  
+	List<Integer> list= new ArrayList<>();
 	
 	// 로또 매니저에 정보를 가져오기 위해서 로또 매니저 초기화
 	
@@ -29,20 +31,58 @@ public class GenNumber{
 		System.out.println(count);
         return count;
     }
-
-    public void SelectNumber(Lotto lotto,int num1,int num2,int num3,int num4,int num5,int num6){
-    	  	lotto.setIndex(0, num1);
-    	  	lotto.setIndex(1, num2);
-    	  	lotto.setIndex(2, num3);
-    	  	lotto.setIndex(3, num4);
-    	  	lotto.setIndex(4, num5);
-    	  	lotto.setIndex(5, num6);
+	
+	// 클릭 액션
+    public List<Integer> SelectNumber(int i){
+    	if(list.size()>6) {
+    	list.add(i); 	
+    	}
+    	return list;
     }
+    
+    //선택 확정 버튼에 들어갈 액션.
+    
+    public int Confirmed(List<Integer> list,Lotto lotto) {
+    	list= this.list;
+    	Random random = new Random();
+    	int count = 0;
+    	for(int i = 0 ; i<list.size(); i++) {
+    	lotto.getNum()[i] = list.get(i);
+    	}
+    	
+    	for (int i = 0; i < lotto.getNum().length; i++) {
+			if(lotto.getNum()[i] == 0) {
+			lotto.getNum()[i] = (int)random.nextInt(45) + 1;
+			
+			for (int j = 0; j < i; j++) {
+					if ( lotto.getNum()[i] == lotto.getNum()[j]) {
+						lotto.getNum()[i] = (int)random.nextInt(45) + 1;
+					}
+				}
+			}
+			count++;	
+		}
+    	System.out.println(lotto.toString());
+    	return count;
+    }
+    	
+    
 
     public void Retouch(){
     }
+    
+    
 public static void main(String[] args) {
-	new GenNumber().RandomGen(new Lotto());
+	GenNumber gen=new GenNumber();
+	gen.SelectNumber(5);
+	gen.SelectNumber(7);
+	gen.SelectNumber(10);
+	
+	gen.Confirmed(gen.SelectNumber(10), new Lotto());
+	
 }
+    
+    
 }
+
 
