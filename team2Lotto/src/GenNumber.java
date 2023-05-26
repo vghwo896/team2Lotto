@@ -13,7 +13,5 @@ public class GenNumber extends LottoManager {
     public void Retouch(){
     }
     
-    public void ViewLotto() {
-    	
-    }
+    
 }
