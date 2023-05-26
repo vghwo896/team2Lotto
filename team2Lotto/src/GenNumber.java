@@ -41,7 +41,9 @@ public class GenNumber{
     	  	lotto.setIndex(5, num6);
     }
 
-    public void Retouch(){
+    public void Retouch(LottoManager lottomanager){
+    	lottomanager.getValue(i);
+    	lottomanager.winNumberGen();
     }
     
     
