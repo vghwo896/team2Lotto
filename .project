@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>git</name>
+<<<<<<< HEAD
+	<name>team2Lotto</name>
+=======
+	<name>로또 프로그램 1차 설계</name>
+>>>>>>> branch 'master' of https://github.com/vghwo896/team2Lotto.git
 	<comment></comment>
 	<projects>
 	</projects>
