@@ -1,4 +1,4 @@
-public class GenNumber extends LottoManager {
+public class GenNumber{
 
     
 	

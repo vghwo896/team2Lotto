@@ -5,6 +5,11 @@ import java.util.Random;
 public class LottoManager {
 	private Map<Integer, Lotto> lottoMap;
 	private int[] winNumber;
+	
+	public LottoManager() {
+		Lotto lotto = new Lotto();
+		lottoMap.put(1, lotto);
+	}
 
 //	public LottoManager() {
 //		lottoMap.put(1, new Lotto());
