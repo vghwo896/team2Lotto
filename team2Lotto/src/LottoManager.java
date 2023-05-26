@@ -6,9 +6,9 @@ public class LottoManager {
 	private Map<Integer, Lotto> lottoMap;
 	private int[] winNumber;
 	
-	public LottoManager() {
-		lottoMap.put(1, lotto);
-	}
+//	public LottoManager() {
+//		lottoMap.put(1, lotto);
+//	}
 
 	// 당첨 번호 7자리를 랜덤 값으로 입력을 받아 winNumber에 넣어준다
 	public void winNumberGen() {
@@ -17,7 +17,7 @@ public class LottoManager {
 		for (int i = 0; i < winNumber.length; i++) {
 			winNumber[i] = random.nextInt(45) + 1;
 			for (int j = 0; j < i; j++) {
-				if (winNumber[j] == winNumber[i]) {
+				if (winNumber[i] == winNumber[j]) {
 					winNumber[i] = random.nextInt(45) + 1;
 				}
 			}

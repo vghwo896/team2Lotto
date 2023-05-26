@@ -1,13 +1,15 @@
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Lotto{
+public class Lotto  {
 	private int[] num;
 	private String form;
 	private String winOrLose;
 
 	public Lotto() {
-		num = new int[] {0,0,0,0,0,0};
+		num=new int[]{0,0,0,0,0,0};
+		form = "자동";
+		winOrLose = "낙첨";
 	}
 
 	public int[] getNum() {
