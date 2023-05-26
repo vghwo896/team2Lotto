@@ -35,6 +35,9 @@ public class Lotto  {
 	public void setWinOrLose(String winOrLose) {
 		this.winOrLose = winOrLose;
 	}
+	public int setIndex(int i) {
+		return num[i];
+	}
 
 	@Override
 	public int hashCode() {
