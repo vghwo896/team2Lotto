@@ -1,4 +1,4 @@
-package Main;
+package LottoGui;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -72,7 +72,7 @@ class Lotto extends JFrame {
 							JOptionPane.ERROR_MESSAGE);
 				}
 			}
-		});
+		}); 
 		// 버튼 넣음
 		add(Mbtn1);
 		add(Mbtn2);
