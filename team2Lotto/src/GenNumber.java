@@ -18,10 +18,8 @@ public class GenNumber{
 		for (int i = 0; i < lotto.getNum().length; i++) {
 			lotto.getNum()[i] = random.nextInt(45) + 1;
 			for (int j = 0; j < i; j++) {
-				if (lotto.getNum()[j] == lotto.getNum()[i]) {
+				if (!(lotto.getNum()[j] == lotto.getNum()[i])) {
 					lotto.getNum()[i] = random.nextInt(45) + 1;
-//					count++;
-//					break;
 				}
 			}
 			count++;
@@ -43,4 +41,8 @@ public class GenNumber{
 
     public void Retouch(){
     }
+public static void main(String[] args) {
+	new GenNumber().RandomGen(new Lotto());
 }
+}
+
