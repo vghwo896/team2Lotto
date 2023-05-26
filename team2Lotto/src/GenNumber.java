@@ -33,7 +33,12 @@ public class GenNumber{
     }
 
     public void SelectNumber(Lotto lotto,int num1,int num2,int num3,int num4,int num5,int num6){
-    	lotto.setIndex(0);    	
+    	  	lotto.setIndex(0, num1);
+    	  	lotto.setIndex(1, num2);
+    	  	lotto.setIndex(2, num3);
+    	  	lotto.setIndex(3, num4);
+    	  	lotto.setIndex(4, num5);
+    	  	lotto.setIndex(5, num6);
     }
 
     public void Retouch(){

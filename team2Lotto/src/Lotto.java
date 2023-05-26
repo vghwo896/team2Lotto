@@ -35,8 +35,8 @@ public class Lotto  {
 	public void setWinOrLose(String winOrLose) {
 		this.winOrLose = winOrLose;
 	}
-	public int setIndex(int i) {
-		return num[i];
+	public int setIndex(int index,int elem) {
+		return num[index]= elem;
 	}
 
 	@Override

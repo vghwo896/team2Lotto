@@ -6,8 +6,9 @@ import java.util.Random;
 public class LottoManager {
 	private Map<Integer, Lotto> lottoMap;
 	private int[] winNumber;
-
+	GenNumber gen;
 	public LottoManager() {
+		gen = new GenNumber();
 		lottoMap = new HashMap<>();
 		lottoMap.put(1, new Lotto());
 	}

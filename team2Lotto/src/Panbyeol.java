@@ -1,4 +1,4 @@
-public class Panbyeol extends LottoManager {
+public class Panbyeol {
 
 	
 	
