@@ -5,25 +5,14 @@ import java.util.Random;
 
 public class GenNumber{
 
-	List<Integer> list;
+	List<Integer> list= new ArrayList<>();
 	
 	// 로또 매니저에 정보를 가져오기 위해서 로또 매니저 초기화
 	
 	public GenNumber() {
-		list= new ArrayList<>();
+		
 	}
 	
-	
-	public List<Integer> getList() {
-		return list;
-	}
-
-
-	public void setList(List<Integer> list) {
-		this.list = list;
-	}
-
-
 	//맵의 getKey 메서드를 통해서 해당 value 의 로또를 랜덤으로 초기화 하는 메서드.
 	public int RandomGen(Lotto lotto){
 		Random random = new Random();
@@ -53,7 +42,7 @@ public class GenNumber{
     //선택 확정 버튼에 들어갈 액션.
     
     public int Confirmed(List<Integer> list,Lotto lotto) {
-    	list= getList();
+    	list= this.list;
     	Random random = new Random();
     	int count = 0;
     	for(int i = 0 ; i<list.size(); i++) {
@@ -87,8 +76,9 @@ public static void main(String[] args) {
 	GenNumber gen=new GenNumber();
 	gen.SelectNumber(5);
 	gen.SelectNumber(7);
+	gen.SelectNumber(10);
 	
-	gen.Confirmed(gen.SelectNumber(10), new Lotto());
+	gen.Confirmed(gen.list, new Lotto());
 	
 }
     
