@@ -7,7 +7,7 @@ public class Lotto extends LottoManager {
 	private String winOrLose;
 
 	public Lotto() {
-//		num=new int{0,0,0,0,0,0};
+		num=new int[]{0,0,0,0,0,0};
 	}
 
 	public int[] getNum() {
