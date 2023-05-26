@@ -34,7 +34,7 @@ public class GenNumber{
 	
 	// 클릭 액션
     public List<Integer> SelectNumber(int i){
-    	if(list.size()>6) {
+    	if(list.size()<6) {
     	list.add(i); 	
     	}
     	return list;
@@ -77,7 +77,6 @@ public static void main(String[] args) {
 	GenNumber gen=new GenNumber();
 	gen.SelectNumber(5);
 	gen.SelectNumber(7);
-	gen.SelectNumber(10);
 	
 	gen.Confirmed(gen.SelectNumber(10), new Lotto());
 	
