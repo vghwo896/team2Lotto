@@ -1,3 +1,4 @@
+package logicLotto;
 public class Panbyeol {
 
 	

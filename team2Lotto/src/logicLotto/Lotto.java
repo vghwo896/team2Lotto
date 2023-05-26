@@ -1,3 +1,4 @@
+package logicLotto;
 import java.util.Arrays;
 import java.util.Objects;
 
