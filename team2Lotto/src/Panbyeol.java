@@ -1,4 +1,4 @@
-public class Panbyeol{
+public class Panbyeol {
 
 	
 	
