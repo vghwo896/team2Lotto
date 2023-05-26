@@ -15,7 +15,7 @@ public class LottoManager {
 		winNumber = new int[7];
 		Random random = new Random();
 		for (int i = 0; i < winNumber.length; i++) {
-			winNumber[i] = 
+//			winNumber[i] = 
 		}
 	}
 
