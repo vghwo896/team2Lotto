@@ -1,9 +1,12 @@
-public class Panbyeol extends LottoManager {
+public class Panbyeol {
 
-    public void panbyeolWinLose(){
+	
+	
+	public void panbyeolWinLose(){
     }
 
-    public void panbyeolForm(){
+    
+	public void panbyeolForm(){
     }
 
 }

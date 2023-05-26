@@ -1,13 +1,15 @@
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Lotto extends LottoManager {
+public class Lotto  {
 	private int[] num;
 	private String form;
 	private String winOrLose;
 
 	public Lotto() {
-//		num=new int{0,0,0,0,0,0};
+		num=new int[]{0,0,0,0,0,0};
+		form = "자동";
+		winOrLose = "낙첨";
 	}
 
 	public int[] getNum() {
@@ -32,6 +34,9 @@ public class Lotto extends LottoManager {
 
 	public void setWinOrLose(String winOrLose) {
 		this.winOrLose = winOrLose;
+	}
+	public int setIndex(int index,int elem) {
+		return num[index]= elem;
 	}
 
 	@Override
