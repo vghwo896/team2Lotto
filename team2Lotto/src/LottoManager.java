@@ -7,13 +7,8 @@ public class LottoManager {
 	private int[] winNumber;
 	
 	public LottoManager() {
-		Lotto lotto = new Lotto();
 		lottoMap.put(1, lotto);
 	}
-
-//	public LottoManager() {
-//		lottoMap.put(1, new Lotto());
-//	}
 
 	// 당첨 번호 7자리를 랜덤 값으로 입력을 받아 winNumber에 넣어준다
 	public void winNumberGen() {
